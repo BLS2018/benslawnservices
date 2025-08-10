@@ -1,31 +1,4 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: BLS2018/benslawnservices
   branch: main
-
-media_folder: "assets/img"
-public_folder: "/assets/img"
-
-collections:
-  - label: "Site"
-    name: "site"
-    files:
-      - label: "Main Content"
-        name: "main"
-        file: "content/site.json"
-        fields:
-          - { label: "Business Name", name: "business_name", widget: "string" }
-          - { label: "Phone", name: "phone", widget: "string" }
-          - { label: "Hero Title", name: "hero_title", widget: "string" }
-          - { label: "Hero Subtitle", name: "hero_subtitle", widget: "text" }
-          - label: "Services"
-            name: "services"
-            widget: "list"
-            fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Description", name: "description", widget: "text" }
-              - { label: "Image", name: "image", widget: "image", required: false }
-          - label: "Gallery"
-            name: "gallery"
-            widget: "list"
-            field: { label: "Image", name: "image", widget: "image" }
-          - { label: "About Text", name: "about", widget: "text", required: false }
