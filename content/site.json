@@ -1,0 +1,12 @@
+{
+  "businessName": "Ben’s Lawn Services",
+  "phone": "555-555-5555",
+  "email": "benslawnservices@yahoo.com",
+  "tagline": "Quality yard care at a fair price",
+  "about": "We mow, edge, trim, and clean up so you don’t have to.",
+  "services": [
+    {"title": "Mowing", "description": "Weekly or biweekly"},
+    {"title": "Edging", "description": "Crisp sidewalks and driveways"},
+    {"title": "Cleanup", "description": "Leaves, branches, and debris"}
+  ]
+}
