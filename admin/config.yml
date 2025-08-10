@@ -10,8 +10,8 @@ collections:
     label: "Pages"
     files:
       - file: "content/home.md"
-        label: "Home Page"
         name: "home"
+        label: "Home Page"
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
