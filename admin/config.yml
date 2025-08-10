@@ -1,31 +1,17 @@
 backend:
-  name: github
-  repo: BLS2018/benslawnservices
+  name: git-gateway
   branch: main
 
 media_folder: "assets/img"
 public_folder: "/assets/img"
 
-slug:
-  clean_accents: true
-
 collections:
-  - name: "site"
-    label: "Site Content"
-    editor:
-      preview: false
+  - name: "pages"
+    label: "Pages"
     files:
-      - file: "content/site.json"
-        label: "Main Content"
-        name: "main"
+      - file: "content/home.md"
+        label: "Home Page"
+        name: "home"
         fields:
-          - { label: "Hero Headline", name: "hero_headline", widget: "string" }
-          - { label: "Hero Subtext", name: "hero_subtext", widget: "string" }
-          - { label: "Phone Number", name: "phone", widget: "string" }
-          - { label: "About Text", name: "about_text", widget: "text" }
-          - label: "Gallery"
-            name: "gallery"
-            widget: "list"
-            fields:
-              - { label: "Image", name: "image", widget: "image" }
-              - { label: "Alt Text", name: "alt", widget: "string" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
