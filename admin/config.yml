@@ -2,3 +2,36 @@ backend:
   name: github
   repo: BLS2018/benslawnservices
   branch: main
+
+media_folder: "assets/img"       # where uploaded images will be saved in the repo
+public_folder: "/assets/img"     # how those images are referenced on the site
+
+collections:
+  - name: "site"
+    label: "Site Content"
+    files:
+      - name: "main"
+        label: "Main Content"
+        file: "content/site.json"
+        fields:
+          - { label: "Site Title", name: "title", widget: "string" }
+          - { label: "Tagline", name: "tagline", widget: "string", required: false }
+          - { label: "Phone", name: "phone", widget: "string" }
+          - { label: "Email", name: "email", widget: "string", required: false }
+          - { label: "Hero Image", name: "hero", widget: "image", required: false }
+          - label: "Services"
+            name: "services"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+          - label: "Gallery"
+            name: "gallery"
+            widget: "list"
+            field: { label: "Image", name: "image", widget: "image" }
+          - label: "Testimonials"
+            name: "testimonials"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Quote", name: "quote", widget: "text" }
