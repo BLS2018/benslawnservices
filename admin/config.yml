@@ -3,8 +3,8 @@ backend:
   repo: BLS2018/benslawnservices
   branch: main
 
-media_folder: "assets/img"       # where uploaded images will be saved in the repo
-public_folder: "/assets/img"     # how those images are referenced on the site
+media_folder: "assets/img"
+public_folder: "/assets/img"
 
 collections:
   - name: "site"
