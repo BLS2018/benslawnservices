@@ -6,32 +6,26 @@ backend:
 media_folder: "assets/img"
 public_folder: "/assets/img"
 
+slug:
+  clean_accents: true
+
 collections:
   - name: "site"
     label: "Site Content"
+    editor:
+      preview: false
     files:
-      - name: "main"
+      - file: "content/site.json"
         label: "Main Content"
-        file: "content/site.json"
+        name: "main"
         fields:
-          - { label: "Site Title", name: "title", widget: "string" }
-          - { label: "Tagline", name: "tagline", widget: "string", required: false }
-          - { label: "Phone", name: "phone", widget: "string" }
-          - { label: "Email", name: "email", widget: "string", required: false }
-          - { label: "Hero Image", name: "hero", widget: "image", required: false }
-          - label: "Services"
-            name: "services"
-            widget: "list"
-            fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Description", name: "description", widget: "text" }
+          - { label: "Hero Headline", name: "hero_headline", widget: "string" }
+          - { label: "Hero Subtext", name: "hero_subtext", widget: "string" }
+          - { label: "Phone Number", name: "phone", widget: "string" }
+          - { label: "About Text", name: "about_text", widget: "text" }
           - label: "Gallery"
             name: "gallery"
             widget: "list"
-            field: { label: "Image", name: "image", widget: "image" }
-          - label: "Testimonials"
-            name: "testimonials"
-            widget: "list"
             fields:
-              - { label: "Name", name: "name", widget: "string" }
-              - { label: "Quote", name: "quote", widget: "text" }
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Alt Text", name: "alt", widget: "string" }
