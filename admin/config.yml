@@ -1,28 +1,21 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: BLS2018/benslawnservices
   branch: main
 
 media_folder: "assets/img"
 public_folder: "/assets/img"
 
-publish_mode: editorial_workflow
-
 collections:
-  - name: "site"
-    label: "Site Content"
+  - label: "Main Content"
+    name: "site"
     files:
-      - file: "content/site.json"
-        label: "Main Content"
-        name: "main"
+      - label: "Site Content"
+        name: "site"
+        file: "content/site.json"
         fields:
-          - { label: "Business Name", name: "businessName", widget: "string" }
-          - { label: "Phone", name: "phone", widget: "string" }
-          - { label: "Email", name: "email", widget: "string" }
-          - { label: "Tagline", name: "tagline", widget: "string" }
-          - { label: "About", name: "about", widget: "text" }
-          - label: "Services"
-            name: "services"
-            widget: "list"
-            fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Description", name: "description", widget: "string" }
+          - {label: "Headline", name: "headline", widget: "string", required: false}
+          - {label: "About", name: "about", widget: "text", required: false}
+          - {label: "Phone", name: "phone", widget: "string", required: false}
+          - {label: "Email", name: "email", widget: "string", required: false}
+          - {label: "Services", name: "services", widget: "list", required: false, fields: [{label:"Title", name:"title", widget:"string"}, {label:"Description", name:"description", widget:"text", required:false}]}
