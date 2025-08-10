@@ -1,10 +1,9 @@
 backend:
-  name: github
-  repo: BLS2018/benslawnservices
+  name: git-gateway
   branch: main
 
-media_folder: "static/img" # Folder where uploaded files go in your repo
-public_folder: "/img"      # Public URL path for those files
+media_folder: "assets/img"
+public_folder: "/assets/img"
 
 collections:
   - name: "pages"
